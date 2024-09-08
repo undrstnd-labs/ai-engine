@@ -1,5 +1,12 @@
 # @undrstnd/ai-engine
 
+## 2.3.3
+
+### Patch Changes
+
+- bd39631: Added a readme file & documentation
+- e561f0a: Removed loggings in client
+
 ## 2.3.2
 
 ### Patch Changes
