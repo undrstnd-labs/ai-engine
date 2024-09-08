@@ -13,7 +13,8 @@
     "test": "vitest run",
     "ci": "pnpm run lint && pnpm run test && pnpm run build",
     "release": "pnpm run ci && changeset publish",
-    "fix": "prettier . --write"
+    "fix": "prettier . --write",
+    "generate": "prisma generate && prisma db push"
   },
   "repository": {
     "type": "git",
@@ -39,13 +40,15 @@
     "@types/node": "^22.5.4",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4",
-    "vitest": "^2.0.5"
+    "vitest": "^2.0.5",
+    "prisma": "^5.19.1"
   },
   "dependencies": {
     "@ai-sdk/openai": "^0.0.58",
     "@ai-sdk/provider": "^0.0.23",
     "@ai-sdk/provider-utils": "^1.0.18",
     "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+    "@prisma/client": "^5.19.1",
     "ai": "^3.3.28",
     "zod": "^3.23.8"
   },

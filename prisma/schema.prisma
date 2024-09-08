@@ -1,0 +1,194 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum RequestStatus {
+  SUCCESS
+  FAILED
+  PENDING
+}
+
+model Waitlist {
+  id    String @id @default(cuid())
+  email String @unique
+
+  createdAt DateTime @default(now())
+
+  @@map(name: "waitlist")
+}
+
+model Account {
+  userId String
+
+  type              String
+  provider          String
+  providerAccountId String
+
+  refresh_token String?
+  access_token  String?
+  expires_at    Int?
+
+  token_type String?
+  scope      String?
+  id_token   String?
+
+  session_state String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([provider, providerAccountId])
+  @@map(name: "accounts")
+}
+
+model Session {
+  sessionToken String @unique
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  expires   DateTime
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@map(name: "sessions")
+}
+
+model User {
+  id String @id @default(cuid())
+
+  username String?
+  phone    String? @unique
+  email    String  @unique
+  image    String  @default("https://dev.undrstnd-labs.com/placeholder.svg")
+
+  verified      Boolean   @default(false)
+  emailVerified DateTime? @map("email_verified")
+
+  usages    Usage[]
+  requests  Request[]
+  fundings  Funding[]
+  accounts  Account[]
+  sessions  Session[]
+  apiTokens APIToken[]
+
+  Authenticator Authenticator[]
+
+  deletedAt DateTime? @map(name: "deleted_at")
+  createdAt DateTime  @default(now()) @map(name: "created_at")
+  updatedAt DateTime  @default(now()) @map(name: "updated_at")
+
+  @@map(name: "users")
+}
+
+model VerificationToken {
+  token String @unique
+
+  identifier String
+  expires    DateTime
+
+  passCode        String?
+  verificationUrl String?
+
+  @@id([identifier, token])
+  @@map(name: "verification_tokens")
+}
+
+model Authenticator {
+  credentialID String @unique
+
+  providerAccountId    String
+  credentialPublicKey  String
+  credentialDeviceType String
+  transports           String?
+
+  counter            Int
+  credentialBackedUp Boolean
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, credentialID])
+  @@map(name: "authenticators")
+}
+
+model Funding {
+  id String @id @default(cuid())
+
+  amount   Float
+  currency String
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @default(now()) @map(name: "updated_at")
+
+  @@map(name: "fundings")
+}
+
+model APIToken {
+  id    String @id @default(cuid())
+  token String @unique
+
+  requests Request[]
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  deletedAt DateTime? @map(name: "deleted_at")
+  createdAt DateTime  @default(now()) @map(name: "created_at")
+  updatedAt DateTime  @default(now()) @map(name: "updated_at")
+
+  @@map(name: "api_tokens")
+}
+
+model Request {
+  id     String        @id @default(cuid())
+  status RequestStatus @default(PENDING)
+
+  parameters Json
+  request    Json
+  response   String
+  endpoint   String
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  apiTokenId String
+  apiToken   APIToken @relation(fields: [apiTokenId], references: [id], onDelete: Cascade)
+
+  usageId String? @unique
+  usage   Usage?  @relation(fields: [usageId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @default(now()) @map(name: "updated_at")
+
+  @@map(name: "requests")
+}
+
+model Usage {
+  id String @id @default(cuid())
+
+  tokensUsed Int
+  cost       Float
+
+  request Request?
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  deletedAt DateTime? @map(name: "deleted_at")
+  createdAt DateTime  @default(now()) @map(name: "created_at")
+  updatedAt DateTime  @default(now()) @map(name: "updated_at")
+
+  @@map(name: "usages")
+}
