@@ -1,0 +1,33 @@
+{
+  "name": "@undrstnd/ai-engine",
+  "version": "0.1.0",
+  "description": "Integrate advanced AI capabilities into your applications with our comprehensive SDK.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/undrstnd-labs/ai-engine.git"
+  },
+  "keywords": [
+    "sdk",
+    "engine",
+    "ai-tools",
+    "dev-tools",
+    "openai",
+    "vercel-ai-sdk",
+    "stream-ui"
+  ],
+  "author": "undrstnd-labs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/undrstnd-labs/ai-engine/issues"
+  },
+  "homepage": "https://github.com/undrstnd-labs/ai-engine#readme",
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}
