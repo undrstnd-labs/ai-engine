@@ -2,13 +2,16 @@
   "name": "@undrstnd/ai-engine",
   "version": "0.1.0",
   "description": "Integrate advanced AI capabilities into your applications with our comprehensive SDK.",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
     "dev": "vitest",
     "test": "vitest run",
-    "ci": "pnpm run lint && pnpm run test && pnpm run build"
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "ci && release publish"
   },
   "repository": {
     "type": "git",
@@ -24,12 +27,13 @@
     "stream-ui"
   ],
   "author": "undrstnd-labs",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/undrstnd-labs/ai-engine/issues"
   },
   "homepage": "https://github.com/undrstnd-labs/ai-engine#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.27.8",
     "@types/node": "^22.5.4",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4",
