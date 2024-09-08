@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 1.0.0
+
+### Major Changes
+
+- Implementation of the AI Engine SDK
+
 ## 0.1.3
 
 ### Patch Changes

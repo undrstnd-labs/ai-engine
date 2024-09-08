@@ -1,3 +1,4 @@
-import * as Undrstnd from "@/src/groq";
+import * as createUndrstnd from "@/src/client"
+import { ClientProvider, ClientProviderSettings } from "@/src/types"
 
-export default Undrstnd;
+export { createUndrstnd, ClientProviderSettings, ClientProvider }
