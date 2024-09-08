@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.2.0
+
+### Minor Changes
+
+- 06080ea: Resolving not reading API key
+
 ## 2.1.1
 
 ### Patch Changes
