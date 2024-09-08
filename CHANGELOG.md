@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.1.1
+
+### Patch Changes
+
+- 3a53b28: Linked SDK with Database
+
 ## 2.1.0
 
 ### Minor Changes
