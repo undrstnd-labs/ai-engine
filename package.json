@@ -12,7 +12,7 @@
     "dev": "vitest",
     "test": "vitest run",
     "ci": "pnpm run lint && pnpm run test && pnpm run build",
-    "release": "pnpm run lint && pnpm run test && pnpm run build && release publish"
+    "release": "pnpm run ci && changeset publish"
   },
   "repository": {
     "type": "git",
