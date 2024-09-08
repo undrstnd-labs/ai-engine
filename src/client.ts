@@ -19,6 +19,6 @@ export async function createUndrstnd(
   return createOpenAI({
     baseURL: process.env.GROQ_API_ENDPOINT,
     apiKey: api_token.token,
-   // ...options,
+   ...options,
   })
 }
