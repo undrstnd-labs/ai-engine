@@ -28,7 +28,7 @@
     "stream-ui"
   ],
   "author": "undrstnd-labs",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/undrstnd-labs/ai-engine/issues"
   },
