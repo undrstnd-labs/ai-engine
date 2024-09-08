@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.1.0
+
+### Minor Changes
+
+- e153ce6: Changed how to export 'createUndrstnd' for better DX
+
 ## 2.0.0
 
 ### Major Changes
