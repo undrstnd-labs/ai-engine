@@ -15,10 +15,10 @@ export async function createUndrstnd(
   if (!api_token) {
     throw new Error("API token not found")
   }
-  
+
   return createOpenAI({
     baseURL: process.env.GROQ_API_ENDPOINT,
     apiKey: api_token.token,
-    ...options,
+   // ...options,
   })
 }

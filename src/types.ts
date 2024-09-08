@@ -349,4 +349,7 @@ export {
   type ClientProviderSettings,
   createClient,
   client,
+  EmbeddingModelV1,
+  LanguageModelV1,
+  ProviderV1,
 }
