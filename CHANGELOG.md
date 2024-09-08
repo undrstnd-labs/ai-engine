@@ -1,5 +1,15 @@
 # @undrstnd/ai-engine
 
+## 2.3.0
+
+### Minor Changes
+
+- deb12bd: Resolved not reading prisma
+
+### Patch Changes
+
+- 5a4f4f4: Resolved not reading prisma
+
 ## 2.2.0
 
 ### Minor Changes
