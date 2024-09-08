@@ -1,4 +1,4 @@
 import { createUndrstnd } from "@/src/client"
-import { ClientProvider, ClientProviderSettings } from "@/src/types"
+import { ClientProvider, ClientProviderSettings, LanguageModelV1 } from "@/src/types"
 
-export { ClientProviderSettings, ClientProvider, createUndrstnd }
+export { ClientProviderSettings, ClientProvider, createUndrstnd , LanguageModelV1}
