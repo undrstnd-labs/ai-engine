@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 0.1.2
+
+### Patch Changes
+
+- Fixed 'dist' not being present in package
+
 ## 0.1.1
 
 ### Patch Changes

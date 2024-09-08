@@ -40,4 +40,7 @@ next-env.d.ts
 .contentlayer
 
 # npm
-dist
+src
+.github
+.changeset
+pnpm-lock.json
