@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.0.0
+
+### Major Changes
+
+- a99cfc1: Implementation of the AI Engine SDK
+
 ## 1.0.0
 
 ### Major Changes
