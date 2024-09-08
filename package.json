@@ -13,8 +13,8 @@
     "test": "vitest run",
     "ci": "pnpm generate && pnpm run lint && pnpm run test && pnpm run build",
     "release": "pnpm run ci && changeset publish",
-    "fix": "prettier . --write",
-    "generate": "prisma generate && prisma db push"
+    "generate": "prisma generate && prisma db push",
+    "fix": "prettier . --write"
   },
   "repository": {
     "type": "git",
