@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.3.2
+
+### Patch Changes
+
+- 24c8202: Added 'LanguageModelV1' type
+
 ## 2.3.1
 
 ### Patch Changes
