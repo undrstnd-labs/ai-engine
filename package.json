@@ -1,6 +1,6 @@
 {
   "name": "@undrstnd/ai-engine",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Integrate advanced AI capabilities into your applications with our comprehensive SDK.",
   "private": false,
   "main": "./dist/index.js",

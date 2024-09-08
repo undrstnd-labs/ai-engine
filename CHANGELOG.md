@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 0.1.3
+
+### Patch Changes
+
+- 5f39aa9: Resolving 'Undrstnd' client not being exported
+
 ## 0.1.2
 
 ### Patch Changes
