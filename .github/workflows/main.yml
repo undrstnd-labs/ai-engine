@@ -17,5 +17,13 @@ jobs:
           node-version: 16.x
           cache: "pnpm"
 
+      # Ensure pnpm-lock.yaml is present
+      - name: Check for pnpm-lock.yaml
+        run: |
+          if [ ! -f pnpm-lock.yaml ]; then
+            echo "pnpm-lock.yaml is missing. Generating a new one..."
+            pnpm install
+          fi
+
       - run: pnpm install --frozen-lockfile
       - run: pnpm run lint && pnpm run build && pnpm run test
