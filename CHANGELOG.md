@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.3.4
+
+### Patch Changes
+
+- da52a8a: Resolved 'LanguageModelV1' not being found
+
 ## 2.3.3
 
 ### Patch Changes
