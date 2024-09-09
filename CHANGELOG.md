@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.3
+
+### Patch Changes
+
+- 5a51a40: Resolving 'failed fetch'
+
 ## 2.4.2
 
 ### Patch Changes
