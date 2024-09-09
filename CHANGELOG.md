@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.4
+
+### Patch Changes
+
+- 2cbc4eb: Implemented body & headers
+
 ## 2.4.3
 
 ### Patch Changes
