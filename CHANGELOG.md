@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.5
+
+### Patch Changes
+
+- 9cbc563: Resolved error 'body' in GET
+
 ## 2.4.4
 
 ### Patch Changes
