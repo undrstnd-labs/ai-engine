@@ -1,5 +1,12 @@
 # @undrstnd/ai-engine
 
+## 2.3.5
+
+### Patch Changes
+
+- 83fdf4a: Using external API instead of prisma client
+- a28dec1: Removed prisma old client generation
+
 ## 2.3.4
 
 ### Patch Changes
