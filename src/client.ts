@@ -13,11 +13,13 @@ export async function createUndrstnd(
       },
     }
   )
-  console.log("Response object text:", await token.text())
 
   const responseText = await token.text()
+  console.log("responseText:", responseText)
   const responseJson = JSON.parse(responseText)
   const apiKey = responseJson.token
+
+  console.log("apiKey:", apiKey)
 
   if (!apiKey) {
     throw new Error("API token not found")
