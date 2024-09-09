@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.6
+
+### Patch Changes
+
+- 679c7a3: Console logging error
+
 ## 2.4.5
 
 ### Patch Changes
