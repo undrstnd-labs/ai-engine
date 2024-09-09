@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.12
+
+### Patch Changes
+
+- 34e0944: Unstable and not ready for production
+
 ## 2.4.11
 
 ### Patch Changes
