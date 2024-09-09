@@ -7,13 +7,15 @@ export async function createUndrstnd(
   console.log("options:", options)
 
   console.log("apiKey:", options?.apiKey as string)
-  const token = await fetch(`https://dev.undrstnd-labs.com/api/token`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": options?.apiKey as string,
-    },
-  })
+  const token = await fetch(
+    `https://dev.undrstnd-labs.com/api/token?x-api-key=${options?.apiKey}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  )
   console.log("Response object:", token)
 
   const apiKey = await token.json()
