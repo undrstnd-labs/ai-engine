@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.8
+
+### Patch Changes
+
+- 33cdb37: Adapting to the new Token API
+
 ## 2.4.7
 
 ### Patch Changes
