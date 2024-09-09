@@ -6,6 +6,7 @@ export async function createUndrstnd(
 ): Promise<OpenAIProvider> {
   const token = await fetch(
     `https://dev.undrstnd-labs.com/api/token`, {
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
         "x-api-key": options?.apiKey as string,
