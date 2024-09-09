@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.10
+
+### Patch Changes
+
+- 68194e3: Solved API Token from @/api/token
+
 ## 2.4.9
 
 ### Patch Changes
