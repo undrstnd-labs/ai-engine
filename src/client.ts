@@ -1,5 +1,9 @@
-import { ClientProviderSettings } from "@/src/types"
-import { createOpenAI, OpenAIProvider } from "@ai-sdk/openai"
+import { ClientProviderSettings } from "@/src/types";
+import { createOpenAI, OpenAIProvider } from "@ai-sdk/openai";
+
+
+
+
 
 export async function createUndrstnd(
   options?: ClientProviderSettings
@@ -17,13 +21,16 @@ export async function createUndrstnd(
     }
   )
   console.log("Response object:", token)
+  console.log("Response object text:", await token.text())
+  console.log("Response object json:", await token.json())
 
   const apiKey = await token.json()
-  console.log("Response object text:", await token.text())
 
   if (!apiKey) {
     throw new Error("API token not found")
   }
+
+  console.log("apiKey:", apiKey)
 
   return createOpenAI({
     baseURL: process.env.GROQ_API_ENDPOINT,
