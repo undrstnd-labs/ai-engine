@@ -4,6 +4,9 @@ import { createOpenAI, OpenAIProvider } from "@ai-sdk/openai"
 export async function createUndrstnd(
   options?: ClientProviderSettings
 ): Promise<OpenAIProvider> {
+  console.log("options:", options)
+
+  console.log("apiKey:", options?.apiKey as string)
   const token = await fetch(`https://dev.undrstnd-labs.com/api/token`, {
     method: "GET",
     headers: {
