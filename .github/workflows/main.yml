@@ -30,5 +30,4 @@ jobs:
           fi
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run generate
       - run: pnpm run lint && pnpm run build && pnpm run test

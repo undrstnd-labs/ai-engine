@@ -7,13 +7,12 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "pnpm generate && tsup src/index.ts --format cjs,esm --dts",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
     "dev": "vitest",
     "test": "vitest run",
-    "ci": "pnpm generate && pnpm run lint && pnpm run test && pnpm run build",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
     "release": "pnpm run ci && changeset publish",
-    "generate": "prisma generate && prisma db push",
     "fix": "prettier . --write"
   },
   "repository": {
