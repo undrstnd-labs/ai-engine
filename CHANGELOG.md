@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.2
+
+### Patch Changes
+
+- 95c9cc3: Using raw text for env
+
 ## 2.4.1
 
 ### Patch Changes
