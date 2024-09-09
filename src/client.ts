@@ -15,17 +15,12 @@ export async function createUndrstnd(
   )
 
   const responseText = await token.text()
-  console.log("responseText:", responseText)
   const responseJson = JSON.parse(responseText)
   const apiKey = responseJson.token
-
-  console.log("apiKey:", apiKey)
 
   if (!apiKey) {
     throw new Error("API token not found")
   }
-
-  console.log("apiKey:", apiKey)
 
   return createOpenAI({
     baseURL: process.env.GROQ_API_ENDPOINT,
