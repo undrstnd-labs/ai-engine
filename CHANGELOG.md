@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.1
+
+### Patch Changes
+
+- cb775f1: Not pushing 'public' folder
+
 ## 2.4.0
 
 ### Minor Changes
