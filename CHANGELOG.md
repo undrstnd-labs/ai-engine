@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.7
+
+### Patch Changes
+
+- 19b355b: Debugging Error
+
 ## 2.4.6
 
 ### Patch Changes
