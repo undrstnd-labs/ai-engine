@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.9
+
+### Patch Changes
+
+- 233ceb4: More console logging
+
 ## 2.4.8
 
 ### Patch Changes
