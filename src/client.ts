@@ -1,16 +1,9 @@
-import { ClientProviderSettings } from "@/src/types";
-import { createOpenAI, OpenAIProvider } from "@ai-sdk/openai";
-
-
-
-
+import { ClientProviderSettings } from "@/src/types"
+import { createOpenAI, OpenAIProvider } from "@ai-sdk/openai"
 
 export async function createUndrstnd(
   options?: ClientProviderSettings
 ): Promise<OpenAIProvider> {
-  console.log("options:", options)
-
-  console.log("apiKey:", options?.apiKey as string)
   const token = await fetch(
     `https://dev.undrstnd-labs.com/api/token?x-api-key=${options?.apiKey}`,
     {
@@ -20,11 +13,11 @@ export async function createUndrstnd(
       },
     }
   )
-  console.log("Response object:", token)
   console.log("Response object text:", await token.text())
-  console.log("Response object json:", await token.json())
 
-  const apiKey = await token.json()
+  const responseText = await token.text()
+  const responseJson = JSON.parse(responseText)
+  const apiKey = responseJson.token
 
   if (!apiKey) {
     throw new Error("API token not found")
