@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.11
+
+### Patch Changes
+
+- 1b76d03: Solved accessing token.text()
+
 ## 2.4.10
 
 ### Patch Changes
