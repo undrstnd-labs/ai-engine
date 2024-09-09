@@ -11,6 +11,9 @@ export async function createUndrstnd(
         "Content-Type": "application/json",
         "x-api-key": options?.apiKey as string,
       },
+      body: JSON.stringify({
+        apiKey: options?.apiKey,
+      }),
     }
   )
 
