@@ -1,5 +1,11 @@
 # @undrstnd/ai-engine
 
+## 2.4.0
+
+### Minor Changes
+
+- 3d36fee: Optimizing Package Size by 70%
+
 ## 2.3.5
 
 ### Patch Changes
